@@ -1,6 +1,6 @@
 {
   "name": "z-hook-finder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Finds JS hooks in a given DOM element, inspired by the DOM methodology.",
   "main": "HookFinder.js",
   "repository": {
