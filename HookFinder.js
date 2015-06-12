@@ -7,7 +7,7 @@ function HookFinder($object, baseClass) {
 
 HookFinder.prototype.find = function(hookName, expectedHookNum) {
     var hookClass = this.getHookClass(hookName);
-    var $hooks = this.$object.find('.' + hookName);
+    var $hooks = this.$object.find('.' + hookClass);
     if (expectedHookNum !== undefined) {
         if ($hooks.length > expectedHookNum) {
             console.error('Searched for the hook "' + hookClass + '" expecting ' + expectedHookNum + ' hook' + (expectedHookNum > 1 ? 's': '') + ', but found ' + $hooks.length + ' instead. Returning the first ' + expectedHookNum + ' for now, but this should be fixed.');
