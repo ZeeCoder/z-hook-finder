@@ -1,4 +1,5 @@
 # z-hook-finder
+[![Build Status](https://travis-ci.org/ZeeCoder/z-hook-finder.svg?branch=master)](https://travis-ci.org/ZeeCoder/z-hook-finder)
 [![npm version](https://badge.fury.io/js/z-hook-finder.svg)](http://badge.fury.io/js/z-hook-finder)
 
 ## What is it
