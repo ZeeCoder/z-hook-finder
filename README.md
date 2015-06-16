@@ -36,8 +36,5 @@ finder.find('button', 2);
 Since this is a CommonJS module, it must be used alongside with [Browserify](http://browserify.org/), or
 something similar, like [WebPacker](http://webpack.github.io/).
 
-## Testing
-Tests are in a work-in-progress state.
-
 ## License
 [MIT](LICENSE)
