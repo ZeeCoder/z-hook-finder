@@ -6,9 +6,9 @@ var HookFinder = require('../HookFinder');
 require('mocha-sinon');
 
 describe('HookFinder.js', function () {
-    var window, document, body, $, finder;
+    var window, document, $, finder;
 
-    beforeEach(function() {
+    beforeEach(function(done) {
         this.sinon.stub(console, 'error');
 
         jsdom.env(
@@ -18,6 +18,8 @@ describe('HookFinder.js', function () {
                 document = windowObj.document;
                 $ = require('jquery')(window);
                 finder = new HookFinder($('#module'), 'module__');
+
+                done();
             }
         );
     });
