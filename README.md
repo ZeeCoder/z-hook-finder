@@ -25,6 +25,8 @@ used to differenciate JS classes from classes used solely for design by CSS.
 var HookFinder = require('z-hook-finder');
 
 var finder = new HookFinder($('#js-module'), 'js-module__');
+// Alternatively you can pass the separator "__" or something else as the third
+// parameter: `new HookFinder($('#js-module'), 'js-module', '__');`
 
 finder.find('button');
 // -> returns the jQuery object for the DOM element

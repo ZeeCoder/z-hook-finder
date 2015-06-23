@@ -24,6 +24,15 @@ describe('HookFinder.js', function () {
         );
     });
 
+    describe('#find - initiated with the separator parameter involved', function () {
+        it('should find the element just fine when initialized with the separator parameter', function() {
+            var finder = new HookFinder($('#module'), 'module', '__');
+            var $element = finder.find('element1');
+            expect($element).to.be.an.instanceof($);
+            expect($element.length).to.equal(1);
+        });
+    });
+
     describe('#find - searching for the hook "element1"', function () {
         it('should be a jQuery object with one element', function() {
             var $element = finder.find('element1');

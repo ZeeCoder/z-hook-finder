@@ -1,8 +1,9 @@
 'use strict';
 
-function HookFinder($object, baseClass) {
+function HookFinder($object, baseClass, separator) {
     this.$object = $object;
     this.baseClass = baseClass;
+    this.separator = separator;
 }
 
 HookFinder.prototype.find = function(hookName, expectedHookNum) {
@@ -21,7 +22,7 @@ HookFinder.prototype.find = function(hookName, expectedHookNum) {
 };
 
 HookFinder.prototype.getHookClass = function(hookName) {
-    return this.baseClass + hookName;
+    return this.baseClass + (this.separator !== undefined ? this.separator : '') + hookName;
 };
 
 module.exports = HookFinder;
