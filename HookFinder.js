@@ -12,7 +12,7 @@ HookFinder.prototype.find = function(hookName, expectedHookNum) {
     if (expectedHookNum !== undefined) {
         if ($hooks.length > expectedHookNum) {
             console.error('Searched for the hook "' + hookClass + '" expecting ' + expectedHookNum + ' hook' + (expectedHookNum > 1 ? 's': '') + ', but found ' + $hooks.length + ' instead. Returning the first ' + expectedHookNum + ' for now, but this should be fixed.');
-            $hooks = $hooks.slice(0, expectedHookNum);
+            $hooks = $hooks.slice(1, expectedHookNum);
         } else if ($hooks.length < expectedHookNum) {
             console.error('Expected to find exactly ' + expectedHookNum + ' hook' + (expectedHookNum > 1 ? 's': '') + ' with the class "' + hookClass + '" but found ' + $hooks.length + '.' + ($hooks.length !== 0 ? ' Returning all for now.' : ''));
         }
